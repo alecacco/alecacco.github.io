@@ -4,7 +4,7 @@ $(function() {
 	var QUESTIONNAIRE_END_PAGE = "pages/CQend.html"	//*
 	var QUESTION_FOLDER= "questions/"				//*
 	var QUESTION_FILE_PREFIX = "question"			//*
-	var TICK_TIME_DURATION = 10						//*	
+	var TICK_TIME_DURATION = 120						//*	
 	//*************************************************
 	function update_progress_bar(){
 		var width = ( 100 * parseFloat($('.progress-bar').css('width')) / parseFloat($('.progress-bar').parent().css('width')) )
