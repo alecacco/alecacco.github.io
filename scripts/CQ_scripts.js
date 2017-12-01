@@ -4,7 +4,7 @@ $(function() {
 	var QUESTIONNAIRE_END_PAGE = "pages/CQend.html"	//*
 	var QUESTION_FOLDER= "questions/"				//*
 	var QUESTION_FILE_PREFIX = "question"			//*
-	var TICK_TIME_DURATION = 120						//*	
+	var TICK_TIME_DURATION = 120					//*	
 	//*************************************************
 	function update_progress_bar(){
 		var width = ( 100 * parseFloat($('.progress-bar').css('width')) / parseFloat($('.progress-bar').parent().css('width')) )
@@ -89,6 +89,7 @@ $(function() {
 					$("body").css('background-image','url('+$('#background-info').attr('body_background_image')+')');
 					$("body").css('background-color',old_color);					
 					//reset della barra
+					$("#progress-box").css('visibility','visible');
 					$("#progress-bar").removeClass('bg-danger');
 					$("#progress-bar").addClass('bg-success');
 					$('#progress-bar').css('width', "100%");	
