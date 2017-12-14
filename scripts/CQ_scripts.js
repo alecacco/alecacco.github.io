@@ -32,6 +32,9 @@ $(function() {
 						slide: function( event, ui ) {
 							handle.css('visibility','visible')
 						},
+						stop: function(event,ui) {
+							$('.progress-bar').css('width','0')
+						}
 					});
 					$("#custom-handle").css('visibility','hidden');
 					$("#question-box").css('background-color',() => {
