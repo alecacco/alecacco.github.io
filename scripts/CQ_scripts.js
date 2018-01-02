@@ -6,6 +6,17 @@ $(function() {
 	var QUESTION_FILE_PREFIX = "question"			//*
 	var TICK_TIME_DURATION = 120					//*	
 	//*************************************************
+	
+	var images = new Array();
+	for (i = 1; i <= NUMBER_OF_QUESTIONS; i++) {
+		$("#caching-area").load(QUESTION_FOLDER+QUESTION_FILE_PREFIX+i+".html", function(){
+			images[i] = new Image();
+			images[i].src = $("#background-info").attr("body_background_image");
+			$("#caching-area").append(images[i]);
+		});
+	}
+	$("#deleteme").empty();
+	
 	function update_progress_bar(){
 		var width = ( 100 * parseFloat($('.progress-bar').css('width')) / parseFloat($('.progress-bar').parent().css('width')) )
 		width = width - 3;
