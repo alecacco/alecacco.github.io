@@ -1,6 +1,7 @@
 function drawCiambella(datas,name,id){
     console.log("Ciao");
     console.log(datas);
+
     data = {
         datasets: [{
             data : datas,
@@ -11,13 +12,29 @@ function drawCiambella(datas,name,id){
         }],
 
         // These labels appear in the legend and in the tooltips when hovering different arcs
-        labels: name
+        labels: name,
     };
+
+    options = {
+        legend: {
+            labels: {
+                fontColor: 'white' //set your desired color
+            }
+        },
+        rotation: -Math.PI,
+        cutoutPercentage: 30,
+        animation: {
+            animateRotate: true,
+            animateScale: true
+        }
+    };  
+
+
     var ctx = document.getElementById(id).getContext('2d');
     var myPieChart = new Chart(ctx,{
         type: 'pie',
         data: data,
-        options: Chart.defaults.doughnut
+        options: options//Chart.defaults.doughnut
     });
 }
 
