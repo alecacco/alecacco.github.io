@@ -19,7 +19,7 @@ $(function() {
 	
 	function update_progress_bar(){
 		var width = ( 100 * parseFloat($('.progress-bar').css('width')) / parseFloat($('.progress-bar').parent().css('width')) )
-		width = width - 3;
+		//width = width - 3;
 		$('#progress-bar').css('width', width + "%");
 		if (width <= 50 && width > 25) {
 			$("#progress-bar").removeClass('bg-success');
