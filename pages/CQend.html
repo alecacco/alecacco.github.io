@@ -9,6 +9,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<!--end of Bootstrap inclusion-->
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+		<script type="text/javascript" src="graphics.js"></script>
+		
+		
 		<style>
 			.magic-box{
 				border-radius: 10px;
@@ -28,9 +32,10 @@
 				align: center;
 				padding-left: 2%;
 				background-size: cover;
-				background-position:center bottom;
 				background-repeat: no-repeat;
-				background-image: url(end_background.jpg);
+				background-attachment: fixed;
+				background-position: center; 
+				background-image: url(start_background.png);
 			}
 			#subtitle{
 				border-radius: 10px;
@@ -64,6 +69,17 @@
 		<div class="row" style="height: 100%">
 			<div class="magic-box">	
 				<h1 style="">RISULTATI:</h1>
+					<div class="row">
+						<div class="col-md-6">
+							You are BIASED in the WORKING context~
+						</div>
+						<div id="content" class="col-md-6">
+							<canvas id="Chart1" width="100" height="100"></canvas>
+							<script>
+							  drawCiambella([22, 78], ['male', 'women'],"Chart1")
+							</script>
+						</div>
+					</div>
 				<br>
 				<h4 id="subtitle">Thank you for taking part to our little questionnaire-game!</h4>
 			</div>

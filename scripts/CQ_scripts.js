@@ -48,58 +48,8 @@ $(function() {
 						}
 					});
 					$("#custom-handle").css('visibility','hidden');
-					$("#question-box").css('background-color',() => {
-						var letters = '0123456789ABCDEF';
-						var color = '#';
-						for (var i = 0; i < 6; i++) {
-							color += letters[Math.floor(Math.random() * 16)];
-						}
-						console.log(color);
-						return color;
-					});
-					
-					var hexToInvert = function rgb2hex(rgb) {
-						var hexDigits = new Array
-							("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
-						function hex(x) {
-							return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
-						}
-						rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-						console.log('RETURN NORM:'+ hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]));
-						return hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-					}($("#question-box").css("background-color"));
-
-					$("#question-box").css('color','#'+ function(hexnum){
-						if(hexnum.length != 6) {
-							alert("Hex color must be six hex numbers in length.");
-							return false;
-						}
-						
-						hexnum = hexnum.toUpperCase();
-						var splitnum = hexnum.split("");
-						var resultnum = "";
-						var simplenum = "FEDCBA9876".split("");
-						var complexnum = new Array();
-						complexnum.A = "5";
-						complexnum.B = "4";
-						complexnum.C = "3";
-						complexnum.D = "2";
-						complexnum.E = "1";
-						complexnum.F = "0";
-							
-						for(i=0; i<6; i++){
-							if(!isNaN(splitnum[i])) {
-							  resultnum += simplenum[splitnum[i]]; 
-							} else if(complexnum[splitnum[i]]){
-							  resultnum += complexnum[splitnum[i]]; 
-							} else {
-							  alert("Hex colors must only include hex numbers 0-9, and A-F");
-							  return false;
-							}
-						}
-						console.log('RETURN INV:'+ resultnum);
-						return resultnum;
-					}(hexToInvert));
+					$("#question-box").css('background-color',$('#background-info').attr('question_background_color'));
+					$("#question-box").css('color',$('#background-info').attr('question_text_color'));
 					$("body").css('background-image','url('+$('#background-info').attr('body_background_image')+')');
 					$("body").css('background-color',old_color);					
 					//reset della barra
