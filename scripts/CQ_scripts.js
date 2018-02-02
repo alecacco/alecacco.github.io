@@ -4,7 +4,7 @@ $(function() {
 	var QUESTIONNAIRE_END_PAGE = "pages/CQend.html"	//*
 	var QUESTION_FOLDER= "questions/"				//*
 	var QUESTION_FILE_PREFIX = "question"			//*
-	var TICK_TIME_DURATION = 140					//*	
+	var TICK_TIME_DURATION = 150					//*	
 	//*************************************************
 	
 	var images = new Array();
@@ -19,7 +19,7 @@ $(function() {
 	
 	function update_progress_bar(){
 		var width = ( 100 * parseFloat($('.progress-bar').css('width')) / parseFloat($('.progress-bar').parent().css('width')) )
-		//width = width - 3;
+		width = width - 2;
 		$('#progress-bar').css('width', width + "%");
 		if (width <= 50 && width > 25) {
 			$("#progress-bar").removeClass('bg-success');
