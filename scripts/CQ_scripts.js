@@ -1,7 +1,7 @@
 $(function() {
 	//*************************************************
 	var NUMBER_OF_QUESTIONS = 10;					//*
-	var QUESTIONNAIRE_END_PAGE = "pages/CQend.html"	//*
+	var QUESTIONNAIRE_END_PAGE = "end.html"	//*
 	var QUESTION_FOLDER= "questions/"				//*
 	var QUESTION_FILE_PREFIX = "question"			//*
 	var TICK_TIME_DURATION = 150					//*	
@@ -60,7 +60,7 @@ $(function() {
 					$("body").attr("lock","FALSE");					
 				});
 			} else {
-				window.location.replace(QUESTIONNAIRE_END_PAGE)
+				window.location.href = QUESTIONNAIRE_END_PAGE;
 				//show results
 			}
 		}

@@ -1,9 +1,21 @@
-FIRST STEP: start the http server by running 'run_server.sh"
+======================================================
 
-SECOND STEP: connect to localhost:8000/CQ.html
+ONLINE  - OFFICIAL APPLICATION LINK: alecacco.github.io
 
-THIRD STEP: enjoy
+======================================================
 
-TO EDIT QUESTIONS: edit the content you need in "questions/questionX.html"
+OFFLINE - LOCAL FRAMEWORK:
 
-TO EDIT QUESTION FILES PARAMETERS: edit the first bunch of lines in scripts/CQ_scripts.js
+Starting the local server:	
+	1. start the http server by running 'run_server.sh"
+	2. connect to localhost:8000
+	3. enjoy
+
+Adding and customizing questions: 
+	- add questions by creating new question files in "questions/" (Note: you might have to change project parameters
+	- edit question content by modifying question files in "question/" (e.g. "questions/questionX.html")
+
+Editing project parameters(adding questions, tweaking times, etc): 
+	- edit the first bunch of lines in scripts/CQ_scripts.js
+
+
